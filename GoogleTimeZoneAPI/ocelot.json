@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "DownstreamPathTemplate": "/TimeZone/{location}&{timestamp}",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": ["Get"],
+      "UpstreamPathTemplate": "/api/timezone/{location}&{timestamp}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5021"
+  }
+}
